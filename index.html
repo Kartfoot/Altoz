@@ -66,7 +66,7 @@
 
     .mobile-menu a {
       display: block;
-      padding: 14px 0;
+      padding: 20px 7px;
       text-decoration: none;
       color: #000;
       font-size: 1.2rem;
@@ -85,7 +85,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.4);
       opacity: 0;
       visibility: hidden;
       z-index: 2050;
@@ -112,16 +112,156 @@
     }
 
     .compte {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #000;
-  color: white;
-  text-align: center;
-  padding: 0px;
-  z-index: 1000; /* pour rester au-dessus du contenu */
-}
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 0px;
+      z-index: 1000; /* pour rester au-dessus du contenu */
+    }
+
+
+    .en-tête {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #052466, #0a4c8a, #052466);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: white;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .en-tête-content {
+      max-width: 800px;
+    }
+
+    .en-tête h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .en-tête p {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 32px;
+      background-color: #ffffff;
+      color: #1a2a6c;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .en-tête h1 {
+        font-size: 2.5rem;
+      }
+      .en-tête p {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Section BLOC */
+    .formations-section {
+      padding: 4rem 1.5rem;
+      background-color: #ffffff;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      color: #2c3e50;
+    }
+
+    /* Grille des formations */
+    .formations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Carte de formation */
+    .formation-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .formation-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .formation-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1.25rem;
+      color: #3498db;
+    }
+
+    .formation-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .formation-desc {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .section-title {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -137,13 +277,42 @@
     <a href="/Altoz/autre/Formations.html">formation</a>
     <a href="/Altoz/autre/Porte folio.html">porte folio</a>
     <a href="/Altoz/autre/Contact.html">Contact</a>
-    <a href="/Altoz/connextion.html">connexion</a>
+    <a href="/Altoz/connextion.html" class="connexionmenu">connexion</a>
   </nav>
-
-  <!-- Overlay -->
   <div class="overlay" id="overlay"></div>
 
-  <!-- Contenu -->
+<!-- en-tête Section (la grande section en haut de page) -->
+  <section class="en-tête">
+    <div class="en-tête-content">
+      <h1>Bienvenue sur Altoz</h1>
+      <p>Découvrez des innovantes innovantes pour transformer votre methode de netoyage.</p>
+      <a href="" class="btn">Commencer maintenant</a>
+    </div>
+  </section>
+
+<!-- Section "Nos Formations" -->
+  <section class="formations-section" id="formations">
+    <h2 class="section-title">Nos Formations</h2>
+    <div class="formations-grid">
+
+      <!-- Formation 1 -->
+      <div class="formation-card">
+        <div class="formation-icon">✨</div>
+        <h3 class="formation-title">Formation netoyage interieur</h3>
+        <p class="formation-desc">Apprenez toutes les techniques pour devenir le meilleur agent d’entretien..</p>
+        <a href="#dev-web" class="btn">Découvrir</a>
+      </div>
+
+      <!-- Formation 2 -->
+      <div class="formation-card">
+        <div class="formation-icon">🧴</div>
+        <h3 class="formation-title">Formation netoyage exterieur</h3>
+        <p class="formation-desc">Connaître les produits et les techniques pour bien nettoyer l’extérieur.</p>
+        <a href="#design" class="btn">Découvrir</a>
+      </div>
+    </div>
+  </section>
+
 
   <script>
     const hamburger = document.getElementById('hamburger');
@@ -172,8 +341,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
