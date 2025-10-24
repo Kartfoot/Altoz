@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" type="image/x-icon" href="/Altoz/altoz_formation_logo.jpg">
   <title>Altoz formation</title>
+  <link rel="icon" type="image/x-icon" href="/Altoz/image/altoz_formation_logo.ico">
   <style>
     * {
       margin: 0;
@@ -17,6 +17,7 @@
       background: #fff;
       color: #000;
       overflow-x: hidden;
+      padding-bottom: 0;
     }
 
     /* Barre de navigation fixe */
@@ -98,7 +99,6 @@
       visibility: visible;
     }
 
-    /* Contenu principal */
     main {
       padding: 80px 20px 40px;
     }
@@ -124,7 +124,7 @@
       z-index: 1000; /* pour rester au-dessus du contenu */
     }
 
-
+/* en-tête */
     .en-tête {
       height: 100vh;
       display: flex;
@@ -164,7 +164,7 @@
       display: inline-block;
       padding: 12px 32px;
       background-color: #ffffff;
-      color: #1a2a6c;
+      color: #0a4c8a;
       text-decoration: none;
       font-weight: bold;
       border-radius: 50px;
@@ -176,7 +176,6 @@
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       .en-tête h1 {
         font-size: 2.5rem;
@@ -186,7 +185,43 @@
       }
     }
 
-    /* Section BLOC */
+/* Section "Pourquoi se former ?" */
+    .why-train {
+      padding: 80px 20px;
+      background-color: white;
+    }
+
+    .why-train h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .stat-card {
+      background: #f1f5f9;
+      padding: 24px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .stat-card i {
+      font-size: 2.5rem;
+      color: #0d4a7b;
+      margin-bottom: 12px;
+    }
+
+    .stat-card strong {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+/* Section "Nos Formations" */
     .formations-section {
       padding: 4rem 1.5rem;
       background-color: #ffffff;
@@ -196,21 +231,19 @@
       text-align: center;
       font-size: 2.5rem;
       margin-bottom: 3rem;
-      color: #2c3e50;
+      color: #000000;
     }
 
-    /* Grille des formations */
     .formations-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      max-width: 1200px;
+      max-width: 2800px;
       margin: 0 auto;
     }
 
-    /* Carte de formation */
     .formation-card {
-      background: white;
+      background: #0a4c8a;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
@@ -233,12 +266,12 @@
     .formation-title {
       font-size: 1.5rem;
       margin-bottom: 1rem;
-      color: #2c3e50;
+      color: #000000;
     }
 
     .formation-desc {
       font-size: 1rem;
-      color: #666;
+      color: #ffffff;
       margin-bottom: 1.5rem;
     }
 
@@ -257,10 +290,489 @@
       background-color: #2980b9;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       .section-title {
         font-size: 2rem;
+      }
+    }
+
+/* Section Portfolio */
+    .portfolio {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .portfolio h2 {
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #000000;
+    }
+
+    .portfolio p.subtitle {
+      text-align: center;
+      font-size: 1.15rem;
+      color: #64748b;
+      max-width: 700px;
+      margin: 0 auto 50px;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .portfolio-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background-color: #dbeafe; /* fallback si pas d'image */
+    }
+
+    .card-content {
+      padding: 24px;
+    }
+
+    .card-content h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      color: #0a4c8a;
+    }
+
+    .card-content p {
+      color: #475569;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .card-stats {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #0a4c8a;
+      font-weight: 600;
+    }
+
+    .port{
+      Text-decoration: none;
+    }
+
+    .btn-see-more {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      padding: 12px 36px;
+      background-color: #0d4a7b;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: background 0.3s;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-see-more:hover {
+      background-color: #0a3a60;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .portfolio h2 {
+        font-size: 2rem;
+      }
+
+      .portfolio p.subtitle {
+        font-size: 1rem;
+      }
+    }
+    /* etoile */
+    .star-rating-clickable {
+      display: flex;
+      gap: 4px;
+      font-size: 2rem;
+      color: #ddd; /* étoiles vides */
+      cursor: pointer;
+    }
+
+    .star {
+      transition: color 0.2s ease;
+    }
+
+    .star.active {
+      color: #f59e0b; /* orange = étoile sélectionnée */
+    }
+
+    .star:hover {
+      color: #f59e0b;
+      transform: scale(1.1);
+    }
+  
+/* partie description */
+
+    .but-formation-nettoyage {
+      padding: 80px 20px;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .content-row {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .image-col img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      border: 4px solid #3b82f6; 
+    }
+
+    .text-col {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #0b6fb3;
+      color: white;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .text-col h2 {
+      font-size: 2.2rem;
+      color: #1e293b;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .text-col p {
+      font-size: 1.1rem;
+      color: #64748b;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    .steps {
+      list-style: none;
+      padding-left: 0;
+      counter-reset: step;
+    }
+
+    .steps li {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 20px;
+      font-size: 1.05rem;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      counter-increment: step;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background-color: #0b6fb3;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+@media (max-width: 1200px) {
+  .content-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-col img {
+    max-width: 100%;
+  }
+
+  .text-col {
+    max-width: 100%;
+  }
+
+  .steps li {
+    padding-left: 50px;
+  }
+}
+
+/* Témoignages */
+    .testimonials {
+      padding: 80px 20px;
+      background-color: white;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: #f1f5f9;
+      padding: 24px;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: '“';
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 4rem;
+      color: rgba(13, 74, 123, 0.1);
+      font-family: serif;
+    }
+
+    .testimonial-text {
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      font-weight: 600;
+      color: #0d4a7b;
+    }
+
+    .rating {
+      color: #f59e0b;
+      font-size: 1.2rem;
+      margin-top: 8px;
+    }
+
+
+/* FAQ */
+    .faq {
+      padding: 80px 20px;
+      background-color: #f8fafc;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .faq-item {
+      background: white;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 16px 24px;
+      background-color: #f1f5f9;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      padding: 16px 24px;
+      display: none;
+      background-color: white;
+    }
+
+    .faq-answer.show {
+      display: block;
+    }
+
+/* Partenaires */
+    .partners {
+      padding: 40px 20px;
+      background-color: #0d4a7b;
+      text-align: center;
+    }
+
+    .partners h3 {
+      margin-bottom: 30px;
+      color: #ffffff;
+    }
+
+    .partner-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .partner-logo {
+      width: 120px;
+      height: 60px;
+      background: #e2e8f0;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #0d4a7b;
+    }
+
+/* footer */
+    .footer-altoz {
+      background-color: #0d4a7b;
+      color: #e2e8f0;
+      padding: 60px 0 30px;
+      margin-top: 60px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .footer-altoz-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-altoz-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-altoz-title {
+      color: white;
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .footer-altoz-text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .footer-altoz-list,
+    .footer-altoz-contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-altoz-list li,
+    .footer-altoz-contact-item {
+      margin-bottom: 10px;
+    }
+
+    .footer-altoz-link,
+    .footer-altoz-contact-item {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      display: block;
+    }
+
+    .footer-altoz-link:hover {
+      color: white;
+    }
+
+    .footer-altoz-social-icons {
+      display: flex;
+      gap: 16px;
+      font-size: 1.5rem;
+    }
+
+    .footer-altoz-social-link {
+      color: white;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .footer-altoz-social-link:hover {
+      transform: translateY(-3px);
+    }
+
+    .footer-altoz-bottom-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 30px;
+      border-top: 1px solid #3b82f6;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+    }
+
+    .footer-altoz-copyright {
+      margin: 0;
+    }
+
+    .footer-altoz-legal {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-altoz-legal-link {
+      color: #cbd5e1;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .footer-altoz-legal-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .footer-altoz-bottom-bar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      .footer-altoz-legal {
+        justify-content: center;
       }
     }
   </style>
@@ -269,7 +781,7 @@
   <header> 
     <div class="logo">Altoz formation</div>
     <button class="hamburger-btn" id="hamburger">☰</button>
-  </header>
+  </header> 
 
   <!-- Sidebar (fonctionne partout) -->
   <nav class="mobile-menu" id="mobileMenu">
@@ -289,9 +801,38 @@
       <p>Découvrez des innovantes innovantes pour transformer votre methode de netoyage.</p>
       <a href="" class="btn">Commencer maintenant</a>
     </div>
+  </section> 
+
+<!-- Pourquoi se former ? -->
+  <section class="why-train">
+    <div class="container">
+      <h2>Pourquoi choisir la formation au nettoyage professionnel ?</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <i>📈</i>
+          <strong>+15 000</strong>
+          postes non pourvus en France
+        </div>
+        <div class="stat-card">
+          <i>💼</i>
+          <strong>1500€ - 1800€</strong>
+          salaire moyen mensuel
+        </div>
+        <div class="stat-card">
+          <i>🛡️</i>
+          <strong>Métier stable</strong>
+          peu impacté par les crises
+        </div>
+        <div class="stat-card">
+          <i>🌱</i>
+          <strong>Demande croissante</strong>
+          en nettoyage écologique
+        </div>
+      </div>
+    </div>
   </section>
 
-<!-- Section "Nos Formations" -->
+<!-- Nos Formations -->
   <section class="formations-section" id="formations">
     <h2 class="section-title">Nos Formations</h2>
     <div class="formations-grid">
@@ -313,8 +854,247 @@
       </div>
     </div>
   </section>
+<!-- Portfolio -->
+ <section class="portfolio" id="portfolio">
+    <h2>mon portfolio</h2>
+    <p class="subtitle">Découvrir les travaux de propreté que j’ai déjà effectués</p>
 
+    <div class="portfolio-grid">
+      <!-- Carte 1 -->
+      <a href="bb" class="port">
+        <div class="portfolio-card">
+          <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400/e6f4ff/0d4a7b?text=Data+Science'); background-size: cover; background-position: center;"></div>
+          <div class="card-content">
+            <h3>;;;;;;;;;;;;;;;;;;;</h3>
+            <p>................................................................</p>
+            <div class="card-stats">
+              <!-- <span>
+                <div class="star-rating-clickable" id="starRating">
+                  <span class="star" data-value="1">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="5">★</span>
+                </div>
+                <p class="rating-display">Cliquez sur une étoile pour noter</p>
+              </span> -->
+              <span>:::::::::::::</span>
+            </div>
+          </div>
+        </div>
+      </a>
 
+      <!-- Carte 2 -->
+      <a href="bb" class="port">
+        <div class="portfolio-card">
+          <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400/ffedd5/ea580c?text=Management'); background-size: cover; background-position: center;"></div>
+          <div class="card-content">
+            <h3>;;;;;;;;;;;;;;;;;;;</h3>
+            <p>................................................................</p>
+            <div class="card-stats">
+              <!-- <span>
+                <div class="star-rating-clickable" id="starRating">
+                  <span class="star" data-value="1">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="5">★</span>
+                </div>
+                <p class="rating-display">Cliquez sur une étoile pour noter</p>
+              </span> -->
+              <span>:::::::::::::</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- Carte 3 -->
+       <a href="bb" class="port">
+        <div class="portfolio-card">
+          <div class="card-img" style="background-image: url('https://via.placeholder.com/600x400/d1fae5/0d9488?text=Développement+Web'); background-size: cover; background-position: center;"></div>
+          <div class="card-content">
+            <h3>;;;;;;;;;;;;;;;;;;;</h3>
+            <p>................................................................</p>
+            <div class="card-stats">
+              <!-- <span>
+                <div class="star-rating-clickable" id="starRating">
+                  <span class="star" data-value="1">★</span>
+                  <span class="star" data-value="2">★</span>
+                  <span class="star" data-value="3">★</span>
+                  <span class="star" data-value="4">★</span>
+                  <span class="star" data-value="5">★</span>
+                </div>
+                <p class="rating-display">Cliquez sur une étoile pour noter</p>
+              </span> -->
+              <span>:::::::::::::</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <a href="#formations" class="btn-see-more">Voir toutes nos formations</a>
+  </section>
+
+<!-- Pourquoi nous -->
+  <section class="but-formation-nettoyage">
+    <div class="container">
+      <div class="content-row">
+        <!-- Image -->
+        <div class="image-col">
+          <img src="/Altoz/image/cleaning.jpg" alt="Formé au nettoyage professionnel" />
+        </div>
+
+        <!-- Texte -->
+        <div class="text-col">
+          <span class="tag">Comment ça marche</span>
+          <h2>Une transformation simple et rapide pour tous les professionnels du nettoyage</h2>
+          <p>
+            Avec notre formation certifiante, vous maîtrisez les bonnes pratiques, les outils modernes et les normes d’hygiène dès la première semaine.
+          </p>
+
+          <ol class="steps">
+            <li><strong>Acquérez les gestes professionnels</strong> : techniques de nettoyage adapté aux locaux (bureaux, hôpitaux, écoles…).</li>
+            <li><strong>Développez votre autonomie</strong> : gestion des produits, sécurité, organisation du travail.</li>
+            <li><strong>Obtenez une certification reconnue</strong> : accès direct à des offres d’emploi via nos partenaires.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Témoignages -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>Ils ont réussi grâce à notre formation</h2>
+      <div class="testimonial-cards">
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            Grâce à la formation, j’ai lancé mon entreprise en 2 mois ! Aujourd’hui, j’ai 15 clients réguliers.
+          </div>
+          <div class="testimonial-author">Sarah, 34 ans</div>
+          <div class="rating">★★★★</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            J’étais au chômage, aujourd’hui je travaille pour une société de nettoyage prestigieuse. Merci !
+          </div>
+          <div class="testimonial-author">Marc, 42 ans</div>
+          <div class="rating">★★★</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">
+            La méthode est claire, la formatrice est patiente. Je recommande à 100 % !
+          </div>
+          <div class="testimonial-author">Léa, 28 ans</div>
+          <div class="rating">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <h2>Questions fréquentes</h2>
+      <div class="faq-item">
+        <div class="faq-question">Faut-il du matériel pour commencer ?<span>+</span></div>
+        <div class="faq-answer">
+          Non, nous vous prêtons tout le matériel nécessaire pendant la formation (aspirateurs, produits, etc.). Vous n'avez rien à acheter.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Je n’ai jamais travaillé dans le ménage, est-ce grave ?<span>+</span></div>
+        <div class="faq-answer">
+          Pas du tout ! Notre formation est conçue pour les débutants. Nous partons de zéro et vous accompagnons pas à pas.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Combien de temps dure la formation ?<span>+</span></div>
+        <div class="faq-answer">
+          De 4 à 8 semaines selon la formation choisie. Vous pouvez suivre les cours à votre rythme, en présentiel ou en ligne.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Obtiendrai-je une certification reconnue ?<span>+</span></div>
+        <div class="faq-answer">
+          Oui, toutes nos formations délivrent une certification professionnelle reconnue par les entreprises et l'Etat.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+
+  </footer>
+
+<!-- Partenaires -->
+  <section class="partners">
+    <h3>Nos partenaires & certifications</h3>
+    <div class="partner-logos">
+      <div class="partner-logo">Pôle Emploi</div>
+      <div class="partner-logo">Qualiopi</div>
+    </div>
+  </section>
+
+<!-- footer -->
+  <footer class="footer-altoz">
+  <div class="footer-altoz-wrapper">
+    <div class="footer-altoz-grid">
+      <!-- À propos -->
+      <div class="footer-altoz-col-about">
+        <h4 class="footer-altoz-title">Altoz Formations</h4>
+        <p class="footer-altoz-text">
+          Votre partenaire de confiance pour devenir professionnel du nettoyage, avec des formations certifiantes, pratiques et accessibles à tous.
+        </p>
+      </div>
+
+      <!-- Formations -->
+      <div class="footer-altoz-col-links">
+        <h4 class="footer-altoz-title">Formations</h4>
+        <ul class="footer-altoz-list">
+          <li><a href="#formations" class="footer-altoz-link">Nettoyage résidentiel</a></li>
+          <li><a href="#formations" class="footer-altoz-link">Nettoyage tertiaire</a></li>
+          <li><a href="#formations" class="footer-altoz-link">Auto-entrepreneur</a></li>
+          <li><a href="#method" class="footer-altoz-link">Méthode pédagogique</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-altoz-col-contact">
+        <h4 class="footer-altoz-title">Contact</h4>
+        <ul class="footer-altoz-contact-list">
+          <li class="footer-altoz-contact-item">📞 01 23 45 67 89</li>
+          <li class="footer-altoz-contact-item">✉️ contact@altoz-formations.fr</li>
+        </ul>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="footer-altoz-col-social">
+        <h4 class="footer-altoz-title">Nous suivre</h4>
+        <div class="footer-altoz-social-icons">
+          <a href="mailto:alexandreperrin2009@gmail.com" class="footer-altoz-social-link" aria-label="Facebook">
+            <img src="/Altoz/image/email.svg" width="20px">
+          </a>
+          <a href="https://www.linkedin.com/company/altoz-formation?trk=public_post_feed-actor-name" class="footer-altoz-social-link" aria-label="LinkedIn">
+            <img src="/Altoz/image/linkedin.svg" width="20px">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-altoz-bottom-bar">
+      <p class="footer-altoz-copyright">&copy; 2025 Altoz Formations. Tous droits réservés.</p>
+      <div class="footer-altoz-legal">
+        <a href="/mentions-legales" class="footer-altoz-legal-link">Mentions légales</a>
+        <a href="/cgu" class="footer-altoz-legal-link">CGU</a>
+        <a href="/politique-confidentialite" class="footer-altoz-legal-link">Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- partie menu -->
   <script>
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -340,6 +1120,92 @@
       });
     });
   </script>
+
+<!-- partie etoile -->
+<!-- <script>
+  // On initialise chaque bloc de notation indépendamment
+  document.querySelectorAll('.star-rating').forEach(container => {
+    const stars = container.querySelectorAll('.star');
+    const display = container.nextElementSibling; // <p class="rating-display">
+    const formationId = container.getAttribute('data-formation-id');
+    let currentRating = 0;
+
+    // Fonction pour mettre à jour l'affichage visuel
+    function updateStars(rating) {
+      stars.forEach((star, index) => {
+        if (index < rating) {
+          star.classList.add('active');
+        } else {
+          star.classList.remove('active');
+        }
+      });
+    }
+
+    // Clic sur une étoile
+    stars.forEach(star => {
+      star.addEventListener('click', () => {
+        const value = parseInt(star.getAttribute('data-value'));
+        currentRating = value;
+        updateStars(currentRating);
+        display.textContent = `Note : ${currentRating}/5`;
+
+        // ICI, vous envoyez la note pour CETTE formation
+        console.log(`Note pour "${formationId}" : ${currentRating}`);
+        // Exemple d’envoi :
+        // sendRatingToServer(formationId, currentRating);
+      });
+
+      // Effet au survol (sans changer la note validée)
+      star.addEventListener('mouseenter', () => {
+        const hoverValue = parseInt(star.getAttribute('data-value'));
+        stars.forEach((s, i) => {
+          s.style.color = i < hoverValue ? '#f59e0b' : '#ddd';
+        });
+      });
+
+      star.addEventListener('mouseleave', () => {
+        // Revenir à l’état "sélectionné"
+        stars.forEach((s, i) => {
+          s.style.color = i < currentRating ? '#f59e0b' : '#ddd';
+        });
+      });
+    });
+  });
+
+  // Fonction d’exemple pour envoyer la note (à adapter)
+  /*
+  function sendRatingToServer(formationId, rating) {
+    fetch('/api/rating', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ formationId, rating })
+    })
+    .then(res => res.json())
+    .then(data => console.log('Note enregistrée', data))
+    .catch(err => console.error('Erreur:', err));
+  }
+  */
+</script> -->
+<!-- parite FAQ -->
+  <script>
+    // FAQ
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const isActive = answer.classList.contains('show');
+
+        // Fermer tous les autres
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('show'));
+        document.querySelectorAll('.faq-question span').forEach(s => s.textContent = '+');
+
+        // Ouvrir celui cliqué
+        if (!isActive) {
+          answer.classList.add('show');
+          question.querySelector('span').textContent = '−';
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
-
